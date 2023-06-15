@@ -30,6 +30,9 @@ function App() {
   return (
     <>
       <Header />
+      <div>
+        <CreateNoteForm onAdd={addNote} />
+      </div>
       {notes.map((noteItem, index) => {
         return (
           <Note
@@ -41,8 +44,6 @@ function App() {
           />
         );
       })}
-      <CreateNoteForm onAdd={addNote} />
-
       <Footer />
     </>
   );
